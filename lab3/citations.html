@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Янсон Андрей Алексеевич. Цитаты</title>
+    <link rel="stylesheet" href="../main.css">
+    <style>
+        .citation{
+            border: 1px solid red;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px;
+            box-shadow: 10px 10px 5px #0002;
+            background: linear-gradient(to right top, red, orange, yellow, green, lightblue, blue, purple);
+        }
+        .text{
+            font-size: 30px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .author{
+            text-align: left;
+            font-size: 30px;
+            opacity: 0.8;
+            margin-top: 30px;
+            margin-left: 50%;
+        }
+        .citationONE{
+            border: 1px solid black;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px;
+            background: white;
+        }
+        .textONE{
+            font-size: 20px;
+            font-weight: bold;
+            text-align: justify;
+        }
+        .authorONE{
+            text-align: right;
+            font-size: 15px;
+            opacity: 0.8;
+            margin-top: 30px;
+            margin-left: 50%;
+        }
+        .citationTWO{
+            border: 1px solid gray;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px;
+            background: blueviolet;
+            color: black;
+        }
+        .textTWO{
+            font-size: 20px;
+            font-weight: bold;
+            text-align: justify;
+        }
+        .authorTWO{
+            text-align: right;
+            font-size: 15px;
+            opacity: 0.8;
+            margin-top: 30px;
+            margin-left: 50%;
+        }
+        .citationTHREE{
+            border: 1px solid greenyellow;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px;
+            box-shadow: 10px 10px 5px #0002;
+            background: linear-gradient(to right, pink, yellow, orange);
+        }
+        .textTHREE{
+            font-size: 28px;
+            font-weight: bold;
+            text-align: left;
+        }
+        .authorTHREE{
+            text-align: right;
+            font-size: 15px;
+            opacity: 0.8;
+            margin-top: 30px;
+            margin-left: 50%;
+        }
+        .citationFOUR{
+            border: 5px solid orangered;
+            padding: 25px;
+            border-radius: 15px;
+            margin: 25px;
+            box-shadow: 15px 15px 10px #0002;
+            background: linear-gradient(to left bottom, blue, black, red);
+        }
+        .textFOUR{
+            font-size: 28px;
+            font-weight: bold;
+            text-align: left;
+            color: white;
+        }
+        .authorFOUR{
+            text-align: right;
+            font-size: 15px;
+            opacity: 0.8;
+            margin-top: 30px;
+            margin-left: 50%;
+            color: whitesmoke;
+        }
+        .citationFIVE{
+            border: 5px solid greenyellow;
+            padding: 25px;
+            border-radius: 15px;
+            margin: 25px;
+            box-shadow: 15px 15px 10px #0002;
+            background: linear-gradient(to bottom, green, red,black,orange,pink,white);
+        }
+        .textFIVE{
+            font-size: 28px;
+            font-weight: bold;
+            text-align: left;
+            color: white;
+        }
+        .authorFIVE{
+            text-align: right;
+            font-size: 15px;
+            opacity: 0.8;
+            margin-top: 30px;
+            margin-left: 50%;
+            color: black;
+        }
+        .citationSIX{
+            border: 5px solid darkgoldenrod;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px;
+            box-shadow: 5px 5px 1px #0002;
+            background: plum;
+        }
+        .textSIX{
+            font-size: 28px;
+            font-weight: bold;
+            text-align: left;
+        }
+        .authorSIX{
+            text-align: right;
+            font-size: 15px;
+            opacity: 0.8;
+            margin-top: 30px;
+            margin-left: 75%;
+        }
+        .citationSEVEN{
+            border: 15px solid white;
+            padding: 25px;
+            border-radius: 20px;
+            margin: 30px;
+            box-shadow: 20px 20px 15px #0002;
+            background: black;
+        }
+        .textSEVEN{
+            font-size: 35px;
+            font-weight: bold;
+            text-align: center;
+            color: white;
+        }
+        .authorSEVEN{
+            text-align: right;
+            font-size: 20px;
+            opacity: 0.8;
+            margin-top: 30px;
+            margin-left: 60%;
+            color: white
+        }
+        .citationEIGHT{
+            border: 1px solid black;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px;
+            box-shadow: 10px 10px 5px #0002;
+            background: peachpuff;
+        }
+        .textEIGHT{
+            font-size: 28px;
+            font-weight: bold;
+            text-align: left;
+            color: blue;
+        }
+        .authorEIGHT{
+            text-align: right;
+            font-size: 15px;
+            opacity: 0.8;
+            margin-top: 30px;
+            margin-left: 50%;
+            color: darkblue;
+        }
+        .citationNINE{
+            border: 100px solid black;
+            padding: 25px;
+            border-radius: 100px;
+            margin: 25px;
+            box-shadow: 10px 10px 5px #0002;
+            background: linear-gradient(to right, pink, gold);
+        }
+        .textNINE{
+            font-size: 54px;
+            font-weight: bold;
+            text-align: center;
+            color: black;
+        }
+        .authorNINE{
+            text-align: right;
+            font-size: 38px;
+            opacity: 0.8;
+            margin-top: 30px;
+            margin-left: 50%;
+            color: black;
+        }
+        .citationTEN{
+            border: 2px solid plum;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px;
+            box-shadow: 10px 10px 5px #0002;
+            background: darkslategrey;
+        }
+        .textTEN{
+            font-size: 28px;
+            font-weight: bold;
+            text-align: left;
+            color: white;
+        }
+        .authorTEN{
+            text-align: right;
+            font-size: 15px;
+            opacity: 0.8;
+            margin-top: 30px;
+            margin-left: 50%;
+            color: white
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        НГТУ, ФБ, Лабораторная работа 3
+    </header>
+
+    <main>
+        <div class="citation">
+            <div class="text">
+                Стремитесь не к успеху, а к ценностям, которые он дает.
+            </div>
+            <div class="author">
+                Альберт Эйнштейн
+            </div>
+        </div>
+
+        <div class="citationONE">
+            <div class="textONE">
+                Что разум человека может постигнуть и во что он может поверить, того он способен достичь
+            </div>
+            <div class="authorONE">
+                Наполеон Хилл
+            </div>
+        </div>
+
+        <div class="citationTWO">
+            <div class="textTWO">
+                Сложнее всего начать действовать, все остальное зависит только от упорства
+            </div>
+            <div class="authorTWO">
+                Амелия Эрхарт
+            </div>
+        </div>
+
+        <div class="citationTHREE">
+            <div class="textTHREE">
+                Надо любить жизнь больше, чем смысл жизни
+            </div>
+            <div class="authorTHREE">
+                Федор Достоевский
+            </div>
+        </div>
+
+        <div class="citationFOUR">
+            <div class="textFOUR">
+                Жизнь - это то, что с тобой происодит, пока ты строишь планы.
+            </div>
+            <div class="authorFOUR">
+                Джон Леннон
+            </div>
+        </div>
+
+        <div class="citationFIVE">
+            <div class="textFIVE">
+                Логика может привести вас от пункта А к пункту Б, а воображение - куда угодно
+            </div>
+            <div class="authorFIVE">
+                Альберт Эйнштейн
+            </div>
+        </div>
+
+        <div class="citationSIX">
+            <div class="textSIX">
+                Начинать всегда стоит с того, что сеет сомнения.
+            </div>
+            <div class="authorSIX">
+                Борис Стругацкий
+            </div>
+        </div>
+
+        <div class="citationSEVEN">
+            <div class="textSEVEN">
+                Настоящая ответственность бывает только личной.
+            </div>
+            <div class="authorSEVEN">
+                Фазиль Искандер
+            </div>
+        </div>
+
+        <div class="citationEIGHT">
+            <div class="textEIGHT">
+                Неосмысленная жизнь не стоит того, чтобы жить.
+            </div>
+            <div class="authorEIGHT">
+                Сократ
+            </div>
+        </div>
+
+        <div class="citationNINE">
+            <div class="textNINE">
+                80% успеха - это появиться в нужном месте в нужное время.
+            </div>
+            <div class="authorNINE">
+                Вуди Аллен
+            </div>
+        </div>
+
+        <div class="citationTEN">
+            <div class="textTEN">
+                Ваше время ограничено, не тратьте его, живя чужой жизнью.
+            </div>
+            <div class="authorTEN">
+                Стив Джобс
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        &copy; Янсон Андрей, ФБИ-21, 2 курс, 2024
+    </footer>
+</body>
+</html>
