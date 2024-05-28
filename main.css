@@ -12,12 +12,18 @@ header {
     text-align: center;
 }
 footer {
-    background-color: brown;
-    color: greenyellow;
+    background-color: rgb(15, 108, 124);
+    color: rgb(253, 224, 93);
     font-size: 16pt;
     padding: 10px;
     font-style: italic;
     text-align: right;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+main{
+    margin: 10px 20px 94px;
 }
 a {
     color: green;
