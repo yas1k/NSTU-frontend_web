@@ -8,6 +8,53 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="../favicon-16x16.png">
     <link rel="icon" href="../favicon-32x32.png">
+    <script>
+        function showSum() {
+            let utug = parseInt(document.getElementById('utug').value || 0) * 3000;
+            let tea = parseInt(document.getElementById('tea').value || 0) * 1800;
+            let tv = parseInt(document.getElementById('tv').value || 0) * 25000;
+            let fen = parseInt(document.getElementById('fen').value || 0) * 1500;
+            let speaker = parseInt(document.getElementById('speaker').value || 0) * 4700;
+            let result = utug + tea + tv + fen + speaker;
+            document.getElementById('totalPrice').textContent = 'Общая цена: ' + result + ' руб.';
+        }
+        function Clear() {
+            document.getElementById('utug').value = '';
+            document.getElementById('tea').value = '';
+            document.getElementById('tv').value = '';
+            document.getElementById('fen').value = '';
+            document.getElementById('speaker').value = '';
+            document.getElementById('totalPrice').textContent = '';
+        }
+        </script>
+    <style>
+        .border {
+            width: 320px;
+            height: 600px;
+            border: 3px solid black;
+            border-radius: 25px;
+            background-color: white;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+        }
+
+        .product{
+            padding-left: 30px;
+            padding-bottom: 25px;
+        }
+
+        .buttons{
+            padding-left: 30px;
+        }
+
+        h2{
+            text-align: center;
+        }
+        .total {
+            padding-left: 30px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -15,7 +62,47 @@
     </header>
 
     <main>
+        <div class="border">
 
+            <h2>Корзина товаров</h2>
+            <div class="product">
+                <label>
+                    Утюги (3000р/шт):
+                    <input type="number" placeholder="Введите количество" min="0" id="utug">
+                </label>
+            </div>
+            <div class="product">
+                <label>
+                    Чайники (1800р/шт):
+                    <input type="number" placeholder="Введите количество" min="0" id="tea">
+                </label>
+            </div>
+            <div class="product">
+                <label>
+                    Телевизоры (25000р/шт):
+                    <input type="number" placeholder="Введите количество" min="0" id="tv">
+                </label>
+            </div>
+            <div class="product">
+                <label>
+                    Фены (1500р/шт):
+                    <input type="number" placeholder="Введите количество" min="0" id="fen">
+                </label>
+            </div>
+            <div class="product">
+                <label>
+                    Колонка (4700р/шт):
+                    <input type="number" placeholder="Введите количество" min="0" id="speaker">
+                </label>
+            </div>
+            <div class="buttons">
+                <input type="button" value="Рассчитать" onclick="showSum()">
+                <input type="button" value="Очистить" onclick="Clear()">
+            </div>
+                <div class="product">
+            </div>
+            <div id="totalPrice" class="total"></div>
+        </div>
     </main>
 
     <footer>
