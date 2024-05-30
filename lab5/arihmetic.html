@@ -15,6 +15,14 @@
             let result = a + b;
             alert(' Сумма ' + a + " и " + b + " равна " + result);
         }
+        function showAuthor(){
+            let author = 'Автор страницы:\nЯнсон Андрей Алексеевич';
+            alert(author);
+        }
+        function hello(){
+            let hello = 'Всех приветствую на своей странице!\nПриятного времени суток!';
+            alert(hello);
+        }
     </script>
     <style>
         div {
@@ -33,19 +41,25 @@
             cursor: pointer;
             display: inline-block;
         }
+        header{
+            cursor: pointer;
+        }
+        footer{
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
-    <header>
+    <header onclick="showAuthor()">
         НГТУ, ФБ, Лабораторная работа 5
     </header>
 
     <main>
         <div class="message" onclick="showSum()">Сколько будет 5154+7891?</div>
-        <div class="message">Узнать кто автор страницы</div>
+        <div class="message" onclick="showAuthor()">Узнать кто автор страницы</div>
     </main>
 
-    <footer>
+    <footer ondblclick="hello()">
         &copy; Янсон Андрей, ФБИ-21, 2 курс, 2024
     </footer>
 </body>
