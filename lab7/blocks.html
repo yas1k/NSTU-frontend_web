@@ -11,7 +11,7 @@
     <script>
         function addNewBlock() {
             let newBlock = document.createElement('div');
-            newBlock.style.backgroundColor = "Grey";
+            newBlock.style.backgroundColor = "bisque";
             newBlock.style.height = "40px";
             newBlock.style.border = "2px solid black"; 
             newBlock.style.margin = "10px"; 
@@ -19,6 +19,21 @@
             newBlock.style.width = "95%"; 
 
             document.querySelector('main').appendChild(newBlock);
+        }
+        function addNewBlocks() {
+            let main = document.querySelector('main')
+            for (let i = 0; i<10; i++) {
+                let newBlock = document.createElement('div');
+                newBlock.style.backgroundColor = "bisque";
+                newBlock.style.height = "40px";
+                newBlock.style.border = "2px solid black"; 
+                newBlock.style.margin = "10px"; 
+                newBlock.style.padding = "5px"; 
+                newBlock.style.width = `${40 + i}%`;
+                newBlock.innerHTML = `Блок №${i + 1}: 2*${i}<sup>2</sup> = ${2 * i**2}`;
+
+                main.appendChild(newBlock);
+            }
         }
     </script>
 </head>
@@ -29,6 +44,7 @@
 
     <main>
         <button onclick="addNewBlock()">Добавить блок</button>
+        <button onclick="addNewBlocks()">Добавить блоки</button>
     </main>
 
     <footer>
