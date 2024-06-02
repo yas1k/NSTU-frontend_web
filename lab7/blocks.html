@@ -86,6 +86,30 @@
                 main.appendChild(newBlockopacity);
             }
         }
+        function generateCircles() {
+            let main = document.querySelector('main');
+            const count = parseInt(document.getElementById('numberInput').value);
+            for (let i = count; i > 0; i--) {
+                let newCircle = document.createElement('div');
+                newCircle.style.height = "20px";
+                newCircle.style.border = "2px solid grey";
+                newCircle.style.borderRadius = "50%"; 
+                newCircle.style.margin = "15px"; 
+                newCircle.style.padding = "5px"; 
+                newCircle.style.width = "20px";
+                newCircle.style.color = "white";
+                newCircle.style.display = "inline-block";
+                newCircle.style.textAlign = "center";
+                newCircle.innerText = i;
+                if(i % 2 === 0) {
+                    newCircle.style.backgroundColor = "Green";
+                }
+                else {
+                    newCircle.style.backgroundColor = "Red"
+                }
+                main.appendChild(newCircle);
+            }
+        }
     </script>
 </head>
 <body>
@@ -99,6 +123,8 @@
         <button onclick="add20_50()">20 => 50</button>
         <button onclick="add10_80()">10 => -80</button>
         <button onclick="addNewBlocksopacity()">0% => 100%</button>
+        <input type="number" id="numberInput" min = "0" placeholder="Введите количество кругов">
+        <button onclick="generateCircles()">Цветные круги</button><br><br>
     </main>
 
     <footer>
