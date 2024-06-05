@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Янсон Андрей Алексеевич. Лабораторная работа 5</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon-16x16.png">
+    <link rel="icon" href="../favicon-32x32.png">
+    <script>
+        function showSum(){
+            let inputA = document.getElementById('numberA');
+            let inputB = document.getElementById('numberB');
+
+            let a = parseInt(inputA.value);
+            let b = parseInt(inputB.value);
+            let result = a + b;
+            alert(' Сумма ' + a + " и " + b + " равна " + result);
+        }
+        function showDif(){
+            let inputA = document.getElementById('numberA');
+            let inputB = document.getElementById('numberB');
+
+            let a = parseInt(inputA.value);
+            let b = parseInt(inputB.value);
+            let result = a - b;
+            alert(' Разность ' + a + " и " + b + " равна " + result);
+        }
+        function showProd(){
+            let inputA = document.getElementById('numberA');
+            let inputB = document.getElementById('numberB');
+
+            let a = parseInt(inputA.value);
+            let b = parseInt(inputB.value);
+            let result = a * b;
+            alert(' Произведение ' + a + " и " + b + " равно " + result);
+        }
+        function showDiv(){
+            let inputA = document.getElementById('numberA');
+            let inputB = document.getElementById('numberB');
+
+            let a = parseInt(inputA.value);
+            let b = parseInt(inputB.value);
+            let result = a / b;
+            alert(' Деление ' + a + " на " + b + " равно " + result);
+        }
+        function showAuthor(){
+            let author = 'Автор страницы:\nЯнсон Андрей Алексеевич';
+            alert(author);
+        }
+        function hello(){
+            let hello = 'Всех приветствую на своей странице!\nПриятного времени суток!';
+            alert(hello);
+        }
+        function changeOutput(buttonNum, backColor, textColor){
+            let output = document.getElementById('output');
+            output.innerHTML = "Нажата кнопка " +  buttonNum;
+            output.style.backgroundColor = backColor;
+            output.style.color = textColor;
+        }
+    </script>
+    <style>
+        div {
+            width: 20%;
+            height: 50px;
+            margin: 5px;
+            padding: 5px;
+            background-color: bisque;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            text-align: center;
+            transition: 0.5s;
+        }
+        .message{
+            cursor: pointer;
+            display: inline-block;
+        }
+        header{
+            cursor: pointer;
+        }
+        footer{
+            cursor: pointer;
+        }
+        #output{
+            border: 1px solid;
+            width: 300px;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header onclick="showAuthor()">
+        НГТУ, ФБ, Лабораторная работа 5
+    </header>
+
+    <main>
+        <label>Первое число: <input type="number" value="5154" id="numberA"></label><br>
+        <label>Второе число: <input type="number" value="7891" id="numberB"></label><br>
+
+        <div class="message" onclick="showSum()">Найти сумму чисел</div>
+        <div class="message" onclick="showDif()">Найти разность чисел</div>
+        <div class="message" onclick="showProd()">Найти произведение чисел</div>
+        <div class="message" onclick="showDiv()">Найти результат деления чисел</div>
+
+        <div class="message" onclick="showAuthor()">Узнать кто автор страницы</div>
+
+        <div>
+            <input type="button" value="Кнопка 1" onclick="changeOutput(1, 'red', 'yellow')">
+            <input type="button" value="Кнопка 2" onclick="changeOutput(2, 'black', 'lime')">
+            <input type="button" value="Кнопка 3" onclick="changeOutput(3, 'darkblue', 'white')">
+            <input type="button" value="Кнопка 4" onclick="changeOutput(4, 'white', 'black')">
+        </div>
+
+        <div id="output"></div>
+    </main>
+
+    <footer ondblclick="hello()">
+        &copy; Янсон Андрей, ФБИ-21, 2 курс, 2024
+    </footer>
+</body>
+</html>
